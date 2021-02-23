@@ -5,28 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <style>
+        .bgimage {
+            background-image: url('fondo.jpg');
+            height: 180px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div>Nombre</div>
-            <ul>
-                <li>Sobre mí</li>
-                <li>Trabajos</li>
-                <li>Contacto</li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Jordi Orquin</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll ml-auto" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Sobre mí</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="trabajos.html">Trabajos</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Contacto</a>
+              </li>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <article>
-            <h1>Sobre mí</h1>
-            <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, esse hic nesciunt nobis magni numquam eaque! Id porro quam, ut incidunt repellat eveniet corrupti facilis in est, dolorem totam iure?        
+          </div>
+        </div>
+    </nav>
+    <section class="bgimage">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                </div>
             </div>
-        </article>
-    </main>
-    <footer>
-        Copyright &copy; 2021
-    </footer>
+        </div>
+    </section>
+    <div class="container">
+        <main class="bg-light pt-5 pb-5">
+            <article class="row">
+                <h1 class="col-md-4">Sobre mí</h1>
+                <div class="col-md-8">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugiat, amet sed error ex ipsum dolores minima vitae expedita laudantium cum beatae dicta placeat? Consectetur quia ratione illum officia iste.
+                Ut recusandae dolores, corporis odio pariatur veniam laborum vero officia quas dolore repudiandae ipsam totam. Debitis labore sint commodi nostrum laudantium blanditiis! Harum accusamus est impedit dolorem odit ut voluptatum.
+                Maiores error sit nihil exercitationem ad tenetur at. Molestias, debitis maiores ipsum, illum libero qui suscipit maxime, quasi ut amet corrupti. Perspiciatis repudiandae assumenda iure commodi inventore, reprehenderit eligendi natus.
+                Iste cupiditate provident quisquam aperiam ab libero aut doloremque iusto. Eius, voluptatum. Repellat unde eaque provident, magni vero distinctio iste itaque, quia quam, expedita modi magnam quod sapiente quos fuga!
+                </div>
+            </article>
+        </main>
+    </div>
+    <footer class="bg-light container-fluid p-4">
+        <div class="row">
+            Copyright &copy; 2021
+        </div>
+</footer>
 </body>
 </html>
