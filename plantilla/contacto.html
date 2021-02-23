@@ -24,13 +24,13 @@
           <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll ml-auto" style="--bs-scroll-height: 100px;">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Sobre mí</a>
+                <a class="nav-link" href="index.html">Sobre mí</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="trabajos.html">Trabajos</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="contacto.html">Contacto</a>
+                  <a class="nav-link active" aria-current="page" href="#">Contacto</a>
               </li>
             </ul>
           </div>
@@ -47,12 +47,23 @@
     <div class="container">
         <main class="bg-light pt-5 pb-5">
             <article class="row">
-                <h1 class="col-md-4 text-center">Sobre mí</h1>
+                <h1 class="col-md-4 text-center">Contacto</h1>
                 <div class="col-md-8">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugiat, amet sed error ex ipsum dolores minima vitae expedita laudantium cum beatae dicta placeat? Consectetur quia ratione illum officia iste.
-                Ut recusandae dolores, corporis odio pariatur veniam laborum vero officia quas dolore repudiandae ipsam totam. Debitis labore sint commodi nostrum laudantium blanditiis! Harum accusamus est impedit dolorem odit ut voluptatum.
-                Maiores error sit nihil exercitationem ad tenetur at. Molestias, debitis maiores ipsum, illum libero qui suscipit maxime, quasi ut amet corrupti. Perspiciatis repudiandae assumenda iure commodi inventore, reprehenderit eligendi natus.
-                Iste cupiditate provident quisquam aperiam ab libero aut doloremque iusto. Eius, voluptatum. Repellat unde eaque provident, magni vero distinctio iste itaque, quia quam, expedita modi magnam quod sapiente quos fuga!
+                    <form>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="nombre@email.com">
+                            <label for="floatingInput">Email</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Tu Nombre">
+                            <label for="floatingInput">Nombre</label>
+                          </div>
+                        <div class="form-floating mb-3">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Mensaje</label>
+                          </div>
+                        <button type="submit" class="btn btn-primary">Contactar</button>
+                      </form>
                 </div>
             </article>
         </main>
