@@ -1,0 +1,11 @@
+<style>
+    #logo{
+        font-family: 'Name Smile';
+        font-size: 40px;
+        margin-left: 50px;
+    }
+    .bgimage {
+        background-image: url('fondo.jpg');
+        height: 180px;
+    }
+</style>
