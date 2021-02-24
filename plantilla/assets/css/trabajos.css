@@ -1,0 +1,9 @@
+.col:hover{
+    transform: scale(1.15,1.15);
+}
+.col{
+    transition: transform .3s .1s ease-in-out;
+}
+.header{
+    background-color: #1c1c1c;
+}

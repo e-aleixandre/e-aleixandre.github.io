@@ -1,21 +1,11 @@
-
-#logo{
-    font-family: 'Name Smile';
-    font-size: 40px;
-    margin-left: 50px;
-}
-.bgimage {
-    background-image: url('fondo.jpg');
-    height: 180px;
-}
 @font-face{
     font-family: "Uniform";
-    src: url('UniformRegular.otf');
+    src: url('../../UniformRegular.otf');
     font-style: normal;
 }
 @font-face{
     font-family: "Dead Revolution";
-    src: url('Dead Revolution.otf');
+    src: url('../../Dead Revolution.otf');
     font-style: normal;
 }
 #logo{
@@ -33,7 +23,7 @@
     top: 0;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 300;
     transition: all .1s .1s ease-in;
 }
 img{
@@ -53,4 +43,7 @@ img{
 }
 .carousel-item img {
     height: 100vh;
+}
+#current_page{
+    
 }
