@@ -5,68 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link href="Principal.css" rel="stylesheet" type="text/css">
+    <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="assets/css/principal.css" rel="stylesheet" type="text/css">
+    <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="assets/js/principal.js"></script>
 </head>
-<style>
-    @font-face{
-        font-family: "Uniform";
-        src: url('UniformRegular.otf');
-        font-style: normal;
-    }
-    @font-face{
-        font-family: "Dead Revolution";
-        src: url('Dead Revolution.otf');
-        font-style: normal;
-    }
-    #logo{
-        font-family: 'Uniform';
-        font-size: 80px;
-        margin-left: 8%;
-        color: white;
-    }
-    .bgimage {
-        height: 50%;
-        width: 100%;
-        z-index: 0;
-    }
-    .header{
-        top: 0;
-        position: fixed;
-        width: 100%;
-        z-index: 1;
-        transition: all .1s .1s ease-in;
-    }
-    img{
-        width: 100%;
-        height: auto;
-    }
-    .nav-link{
-        font-family: 'Uniform';
-        font-size: 30px;
-        color: white;
-    }
-    .active{
-        text-decoration: underline;
-    }
-    .carousel-control-prev .carousel-control-next{
-        height: 50px;
-    }
-</style>
-<script>
-    var umbral_SCROLL = 200;
-    window.onscroll = function() {myFunction()};
-    
-    function myFunction() {
-      if (document.body.scrollTop > umbral_SCROLL || document.documentElement.scrollTop > umbral_SCROLL) {
-        document.getElementById("header").style.backgroundColor = "#1c1c1c";
-      }
-      else if(document.body.scrollTop <= umbral_SCROLL || document.documentElement.scrollTop <= umbral_SCROLL){
-        document.getElementById("header").style.backgroundColor = "";
-      }
-    }
-    </script>
 <body>
     
     <header id="header" class="header">
@@ -96,13 +41,13 @@
     <div id="carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src="header_img_1.jpg" class="d-block w-100" alt="...">
+            <img src="assets/imagenes/header_img_1.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item" data-bs-interval="10000">
-            <img src="header_img_2.jpg" class="d-block w-100" alt="...">
+            <img src="assets/imagenes/header_img_2.jpg" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item" data-bs-interval="10000">
-            <img src="header_img_3.bmp" class="d-block w-100" alt="...">
+            <img src="assets/imagenes/header_img_3.bmp" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carousel"  data-bs-slide="prev">

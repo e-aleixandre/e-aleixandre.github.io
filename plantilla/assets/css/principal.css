@@ -1,0 +1,56 @@
+
+#logo{
+    font-family: 'Name Smile';
+    font-size: 40px;
+    margin-left: 50px;
+}
+.bgimage {
+    background-image: url('fondo.jpg');
+    height: 180px;
+}
+@font-face{
+    font-family: "Uniform";
+    src: url('UniformRegular.otf');
+    font-style: normal;
+}
+@font-face{
+    font-family: "Dead Revolution";
+    src: url('Dead Revolution.otf');
+    font-style: normal;
+}
+#logo{
+    font-family: 'Uniform';
+    font-size: 80px;
+    margin-left: 8%;
+    color: white;
+}
+.bgimage {
+    height: 50%;
+    width: 100%;
+    z-index: 0;
+}
+.header{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    transition: all .1s .1s ease-in;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.nav-link{
+    font-family: 'Uniform';
+    font-size: 30px;
+    color: white;
+}
+.active{
+    text-decoration: underline;
+}
+.carousel-control-prev .carousel-control-next{
+    height: 50px;
+}
+.carousel-item img {
+    height: 100vh;
+}
