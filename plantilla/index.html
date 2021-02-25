@@ -9,11 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link href="assets/css/principal.css" rel="stylesheet" type="text/css">
     <!-- JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <script src="assets/js/principal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous" ></script>
+    <script src="assets/js/principal.js" defer></script>
 </head>
 <body>
-    
     <header id="header" class="header">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
@@ -24,13 +23,13 @@
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll ms-auto" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
-                        <a id="current_page" class="nav-link" aria-current="page" href="#" onmouseover="hoverlinks(this)" onmouseleave="nothoverlinks(this)" style="text-decoration: underline;">Sobre mí</a>
+                        <a id="current_page" class="nav-link active" aria-current="page" href="#" onmouseover="hoverlinks(this, document)" onmouseleave="nothoverlinks(this, document)" style="text-decoration: underline;">Sobre mí</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="trabajos.html" onmouseover="hoverlinks(this)" onmouseleave="nothoverlinks(this)">Trabajos</a>
+                        <a class="nav-link" href="trabajos.html" onmouseover="hoverlinks(this, document)" onmouseleave="nothoverlinks(this, document)">Trabajos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contacto.html" onmouseover="hoverlinks(this)" onmouseleave="nothoverlinks(this)">Contacto</a>
+                        <a class="nav-link" href="contacto.html" onmouseover="hoverlinks(this, document)" onmouseleave="nothoverlinks(this, document)">Contacto</a>
                     </li>
                     </ul>
                 </div>
@@ -40,14 +39,14 @@
     
     <div id="carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="10000">
-            <img src="assets/imagenes/header_img_1.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-item active" data-bs-interval="6000">
+            <img src="assets/imagenes/header/header_img_1.jpg" class="d-block w-100" alt="...">
           </div>
-          <div class="carousel-item" data-bs-interval="10000">
-            <img src="assets/imagenes/header_img_2.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-item" data-bs-interval="6000">
+            <img src="assets/imagenes/header/header_img_4.bmp" class="d-block w-100" alt="...">
           </div>
-          <div class="carousel-item" data-bs-interval="10000">
-            <img src="assets/imagenes/header_img_3.bmp" class="d-block w-100" alt="...">
+          <div class="carousel-item" data-bs-interval="6000">
+            <img src="assets/imagenes/header/header_img_2.jpg" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carousel"  data-bs-slide="prev">
@@ -72,6 +71,10 @@
         <main class="bg-light pt-5 pb-5">
             <section class="row my-5">
                 <h1 class="col-md-4 text-center">Sobre mí</h1>
+                <h6 class="col-md-8 borde_detail">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugiat, amet sed error ex ipsum dolores minima vitae expedita laudantium cum beatae dicta placeat? Consectetur quia ratione illum officia iste.
+                </h6>
+                <div class="col-md-4"></div>
                 <div class="col-md-8">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugiat, amet sed error ex ipsum dolores minima vitae expedita laudantium cum beatae dicta placeat? Consectetur quia ratione illum officia iste.
                 Ut recusandae dolores, corporis odio pariatur veniam laborum vero officia quas dolore repudiandae ipsam totam. Debitis labore sint commodi nostrum laudantium blanditiis! Harum accusamus est impedit dolorem odit ut voluptatum.
@@ -81,6 +84,10 @@
             </section>
             <section class="row my-5">
                 <h1 class="col-md-4 text-center">CV</h1>
+                <h6 class="col-md-8 borde_detail">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugiat, amet sed error ex ipsum dolores minima vitae expedita laudantium cum beatae dicta placeat? Consectetur quia ratione illum officia iste.
+                </h6>
+                <div class="col-md-4"></div>
                 <div class="col-md-8">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit, fugiat, amet sed error ex ipsum dolores minima vitae expedita laudantium cum beatae dicta placeat? Consectetur quia ratione illum officia iste.
                 Ut recusandae dolores, corporis odio pariatur veniam laborum vero officia quas dolore repudiandae ipsam totam. Debitis labore sint commodi nostrum laudantium blanditiis! Harum accusamus est impedit dolorem odit ut voluptatum.

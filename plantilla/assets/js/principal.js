@@ -20,11 +20,11 @@
     
     
 })();
-  function hoverlinks(obj){
-    //document.getElementsById("current_page").style.textDecoration = "none";
-    obj.style.textDecoration = "underline";
+  function hoverlinks(obj, document){
+    document.getElementById("current_page").className = "nav-link";
+    obj.className = "nav-link active";
   }
-  function nothoverlinks(obj){
-    obj.style.textDecoration = "none";
-  //document.getElementsById("current_page").style.textDecoration = "underline";
+  function nothoverlinks(obj, document){  
+    obj.className = "nav-link";
+    document.getElementById("current_page").className = "nav-link active";
   }
