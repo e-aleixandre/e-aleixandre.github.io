@@ -4,16 +4,18 @@
     font-style: normal;
 }
 @font-face{
-    font-family: "Dead Revolution";
-    src: url('../../Dead Revolution.otf');
+    font-family: "Animal Silence";
+    src: url('../../Animal Silence.otf');
     font-style: normal;
 }
+body{
+    background-color: #f7f7f7;
+}
 #logo{
-    font-family: 'Uniform';
-    font-size: 80px;
     margin-left: 8%;
-    color: white;
-    text-shadow: 0.8px 0.5px 1px #f1f1f1, -0.8px 0.5px 1px #f1f1f1;
+    margin-top: 1px;
+    height: auto;
+    width: 230px;
 }
 .bgimage {
     height: 50%;
@@ -50,4 +52,10 @@ img{
 }
 .borde_detail{
     border-left: 2px solid #1c1c1c;
+}
+#navbarScroll{
+    padding-right: 0;
+}
+.carousel-item > img{
+    filter: grayscale(10%);
 }

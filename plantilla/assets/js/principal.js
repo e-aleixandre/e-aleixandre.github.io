@@ -21,10 +21,10 @@
     
 })();
   function hoverlinks(obj, document){
-    document.getElementById("current_page").className = "nav-link";
-    obj.className = "nav-link active";
+    document.getElementById("current_page").className = "nav-link text-light";
+    obj.className = "nav-link active text-light";
   }
   function nothoverlinks(obj, document){  
-    obj.className = "nav-link";
-    document.getElementById("current_page").className = "nav-link active";
+    obj.className = "nav-link text-light";
+    document.getElementById("current_page").className = "nav-link active text-light";
   }

@@ -1,3 +1,19 @@
 .header{
     background-color: #1c1c1c;
 }
+.btn{
+    background-color: #1c1c1c;
+    color: white;
+    height: 45px;
+    width: 100px;
+    font-size: 18px;
+}
+.btn:hover{
+    color: white;
+}
+.conteneder {
+    width: 800px;
+}
+#logo_email{
+    padding-top: 75px;
+}
