@@ -47,6 +47,7 @@ img{
 }
 .fa-long-arrow-alt-right{
   color: #1c1c1c;
+  opacity: 0;
 }
 @media(min-width: 640px) {
   .fila-trabajos .col {
