@@ -1,16 +1,15 @@
-.col:hover{
+.card:hover{
     transform: scale(1.1,1.1);
     box-shadow: 1px 1px 25px rgba(0,0,0,0.08), -1px -1px 25px rgba(0,0,0,0.08);
+}
+.card{
+  transition: all .3s .05s ease-in-out;
 }
 .row{
     display: flex;
     justify-content: space-around;
 }
-.col{
-    transition: all .3s .05s ease-in-out;
-    padding: 0;
-    width: 300px;
-}
+
 .header{
     background-color: #1c1c1c;
 }
@@ -46,7 +45,9 @@ img{
   width: 300px;
   margin: 0px;
 }
-
+.fa-long-arrow-alt-right{
+  color: #1c1c1c;
+}
 @media(min-width: 640px) {
   .fila-trabajos .col {
     width: 40%;
@@ -56,5 +57,11 @@ img{
 @media(min-width: 1200px) {
   .fila-trabajos .col {
     width: 30%;
+  }
+}
+
+@media(max-width: 640px){
+  h2{
+    text-align: center;
   }
 }
