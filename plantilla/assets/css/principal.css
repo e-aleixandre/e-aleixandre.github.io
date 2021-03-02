@@ -92,3 +92,13 @@ img{
 .navbar-nav {
     margin-right: 8%;
 }
+#scroll-indicator{
+    position: absolute;
+    top: 90vh;
+    left: 50%;
+    color: #fff;
+    opacity: 0.8;
+    z-index: 301;
+    animation-duration:	1.2s;
+    animation-iteration-count: infinite;
+}

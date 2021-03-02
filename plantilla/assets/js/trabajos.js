@@ -1,10 +1,11 @@
 var trabajos = (function(document){
 
-    function arrowAnimation() {          
+    function arrowAnimation() {     
         this.querySelector('i').classList.add('animate__fadeInLeft');
     }
     function arrowAnimationOut(){
         this.querySelector('i').classList.remove('animate__fadeInLeft');
+        
     }
     var card_elements = document.getElementsByClassName('card');
     for (var i = 0; i < card_elements.length; i++)
