@@ -20,11 +20,13 @@
     
     
 })();
-  function hoverlinks(obj, document){
-    document.getElementById("current_page").className = "nav-link text-light";
-    obj.className = "nav-link active text-light";
+  var elementos = document.getElementsByClassName('nav-link');
+  for (var i = 0; i < elementos.length; i++)
+  {
+      elementos[i].addEventListener('mouseover', hoverlinks);
+      elementos[i].addEventListener('mouseleave', hoverlinks);
   }
-  function nothoverlinks(obj, document){  
-    obj.className = "nav-link text-light";
-    document.getElementById("current_page").className = "nav-link active text-light";
+  function hoverlinks(event){
+    document.getElementById("current_page").classList.toggle('active');
+    this.classList.toggle('active');
   }

@@ -15,7 +15,7 @@ body{
     margin-left: 8%;
     margin-top: 1px;
     height: auto;
-    width: 230px;
+    width: 200px;
 }
 .bgimage {
     height: 50%;
@@ -38,11 +38,16 @@ img{
 }
 .nav-link{
     font-family: 'Uniform';
+    padding-bottom: 0px;
     font-size: 30px;
     color: white;
 }
 .active{
-    text-decoration: underline;
+    text-decoration: none;
+    transform: translateX(-3px);
+    transform: scale(1.05,1.05);
+    transition: 0.05s ease-in;
+    border-bottom: 2px solid white;
 }
 .carousel-control-prev .carousel-control-next{
     height: 50px;

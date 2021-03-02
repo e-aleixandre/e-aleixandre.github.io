@@ -11,15 +11,9 @@
     <link href="assets/css/trabajos.css" rel="stylesheet" type="text/css">
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <script src="assets/js/principal.js"></script>
-    <script defer>
-        function mostrarDescripcionTrabajos()
-        {
-            alert('hola');
-        }
-
-        document.getlElementsByClassName('col').addEventListener('click', function(){alert('hola')}, false);
-    </script>
+    <script src="assets/js/principal.js" defer></script>
+    <script src="../processing-js-master/processing.min.js"></script>
+    <script language=”javascript” src=../processing-js-master/javascript.js”></script>
 </head>
 <body>
     <header id="header" class="header">
@@ -32,13 +26,13 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll ms-auto" style="--bs-scroll-height: 120px;">
                     <li class="nav-item">
-                        <a class="nav-link text-light"  href="index.html" onmouseover="hoverlinks(this, document)" onmouseleave="nothoverlinks(this, document)">Sobre mí</a>
+                        <a class="nav-link text-light"  href="index.html">Sobre mí</a>       
                     </li>
                     <li class="nav-item">
-                        <a id="current_page" class="nav-link active text-light" href="#" onmouseover="hoverlinks(this, document)" onmouseleave="nothoverlinks(this, document)">Trabajos</a>
+                        <a id="current_page" class="nav-link active text-light" href="#">Trabajos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  text-light" href="contacto.html" onmouseover="hoverlinks(this, document)" onmouseleave="nothoverlinks(this, document)">Contacto</a>
+                        <a class="nav-link  text-light" href="contacto.html">Contacto</a>
                     </li>
                     </ul>
                 </div>
@@ -58,7 +52,8 @@
         </div>
         <div class="container modal-body">
             <div class="col-12">
-                <video src="assets/videos/TrabajoFinalAnimacion.mp4" poster="assets/imagenes/trabajos/rigging.png" style="height: 100%; width: 100%;" controls autoplay></video>
+                <!--<video src="assets/videos/TrabajoFinalAnimacion.mp4" poster="assets/imagenes/trabajos/rigging.png" style="height: 100%; width: 100%;" controls autoplay></video>-->
+                <canvas data-processing-sources="assets/pde/BubleShooter.pde" widht="300px" height="300px"></canvas>
             </div>
         </div>
         <div class="modal-footer">
