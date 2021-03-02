@@ -18,3 +18,33 @@ img{
     height: 200px;
     width: auto;
 }
+
+.fila-trabajos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.fila-trabajos .col {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.fila-trabajos .col .card {
+  width: 300px;
+  margin: 0px;
+}
+
+@media(min-width: 640px) {
+  .fila-trabajos .col {
+    width: 40%;
+  }
+}
+
+@media(min-width: 1200px) {
+  .fila-trabajos .col {
+    width: 30%;
+  }
+}
