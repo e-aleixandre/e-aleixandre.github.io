@@ -1,11 +1,11 @@
 @font-face{
     font-family: "Uniform";
-    src: url('../../UniformRegular.otf');
+    src: url('../fonts/UniformRegular.otf');
     font-style: normal;
 }
 @font-face{
     font-family: "Animal Silence";
-    src: url('../../Animal Silence.otf');
+    src: url('../fonts/Animal Silence.otf');
     font-style: normal;
 }
 body{
@@ -63,4 +63,8 @@ img{
 }
 .carousel-item > img{
     filter: grayscale(10%);
+}
+
+.navbar-nav {
+    margin-right: 8%;
 }
