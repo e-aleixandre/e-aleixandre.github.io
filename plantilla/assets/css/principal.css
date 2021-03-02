@@ -23,12 +23,34 @@ body{
     z-index: 0;
 }
 .header{
-    top: 0;
-    position: fixed;
     width: 100%;
     z-index: 300;
     transition: all .1s .1s ease-in;
+    background-color: #1C1C1C;
 }
+#logo {
+    margin-left: 0;
+}
+
+#header > .navbar > .container-fluid {
+    flex-direction: column;
+}
+
+@media(min-width: 990px) {
+    .header {
+        background-color: initial;
+        top: 0;
+        position: fixed;
+    }
+    #header > .navbar > .container-fluid {
+        flex-direction: row;
+    }
+    #logo {
+        margin-left: 8%;
+    }
+    
+}
+
 h2{
     margin-bottom: 12px;
 }
