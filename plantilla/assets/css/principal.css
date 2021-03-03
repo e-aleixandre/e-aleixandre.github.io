@@ -8,12 +8,18 @@
     src: url('../fonts/Animal Silence.otf');
     font-style: normal;
 }
+html {
+  scroll-behavior: smooth;
+}
 body{
     background-color: #f7f7f7;
 }
-#logo{
-    margin-left: 8%;
+header > nav > .container-fluid > a{
+    margin-left: 6%;
     margin-top: 1px;
+}
+#logo{
+    margin: 0;
     height: auto;
     width: 200px;
 }
