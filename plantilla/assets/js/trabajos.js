@@ -2,36 +2,45 @@ var trabajos = (function(document){
 
     //Controles Vídeo
     function playVideo(){
-        var video = document.getElementById("video");
-        video.classList.toggle('video-play');
-        video.play();
+        var video = this.parentNode.parentNode.getElementsByTagName('video');
+        video[0].classList.toggle('video-play');
+        video[0].play();
     }
     function pauseVideo(){
-        document.getElementById("video").pause();
-        video.classList.toggle('video-play');
+        var video = this.parentNode.parentNode.getElementsByTagName('video');
+        video[0].pause();
+        video[0].classList.toggle('video-play');
     }
     function stopVideo(){
-        document.getElementById("video").pause();
-        document.getElementById("video").currentTime = 0;
-        video.classList.toggle('video-play');
+        var video = this.parentNode.parentNode.getElementsByTagName('video');
+        video[0].pause();
+        video[0].currentTime = 0;
+        video[0].classList.toggle('video-play');
     }
     function backwardVideo(){
-        var video = document.getElementById("video");
-        video.currentTime = video.currentTime - 2;
+        var video = this.parentNode.parentNode.getElementsByTagName('video');
+        video[0].currentTime = video[0].currentTime - 2;
     }
     function forwardVideo(){
-        var video = document.getElementById("video");
-        video.currentTime = video.currentTime + 2;
+        var video = this.parentNode.parentNode.getElementsByTagName('video');
+        video[0].currentTime = video[0].currentTime + 2;
     }
     function fullscreenVideo(){
-        document.getElementById("video").requestFullscreen();
+        this.parentNode.parentNode.getElementsByTagName('video')[0].requestFullscreen();
     }
+    
     function switchVideoStatus(){
-        var video = document.getElementById("video");
-        if(video.paused)
-            playVideo();
-        else
-            pauseVideo();
+        if(this.paused){
+            this.play();
+            this.classList.toggle('video-play');
+        }
+        else{
+            this.pause();
+            this.classList.toggle('video-play');
+        }
+    }
+    function setVideoInformation(){
+        //this.duration;
     }
 
     var controles_video = document.getElementsByClassName("controles-video");
@@ -45,9 +54,13 @@ var trabajos = (function(document){
         controles_video[i].querySelector('i.fa-expand-arrows-alt').addEventListener('click', fullscreenVideo);
     }
 
+    //Selección de todos los objetos tipo vídeo
     var video_elements = document.getElementsByTagName('video');
     for(var j = 0; j < controles_video.length; j++)
+    {
         video_elements[j].addEventListener('click', switchVideoStatus);
+        video_elements[j].addEventListener('loadeddata', setVideoInformation);
+    }
     
     
 
@@ -57,7 +70,6 @@ var trabajos = (function(document){
     }
     function arrowAnimationOut(){
         this.querySelector('i').classList.remove('animate__fadeInLeft');
-        
     }
     var card_elements = document.getElementsByClassName('card');
     for (var i = 0; i < card_elements.length; i++)

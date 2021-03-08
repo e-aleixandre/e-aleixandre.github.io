@@ -53,7 +53,7 @@
         </div>
         <div class="container modal-body">
             <div class="col-12">
-                <video id="video"  src="assets/videos/TrabajoFinalAnimacion.mp4" poster="assets/imagenes/trabajos/rigging.png" style="height: 100%; width: 100%;"></video>
+                <video id="video" src="assets/videos/TrabajoFinalAnimacion.mp4" poster="assets/imagenes/trabajos/rigging.png" style="height: 100%; width: 100%;"></video>
                 <div class="row container-fluid ms-auto controles-video">
                     <i class="fas fa-play fa-lg col-2"></i>
                     <i class="fas fa-pause fa-lg col-2"></i>
@@ -61,6 +61,14 @@
                     <i class="fas fa-backward fa-lg col-2"></i>
                     <i class="fas fa-forward fa-lg col-2"></i>
                     <i class="fas fa-expand-arrows-alt fa-lg col-2"></i>
+                </div>
+                <div class="container-fluid">
+                    <div>
+                        Volumen
+                    </div>
+                    <div>
+                        Tiempo
+                    </div>
                 </div>
             </div>
         </div>
@@ -84,7 +92,34 @@
             </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn_cerrar" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Animación -->
+  <div class="modal fade" id="TrayectoriaAlabeo" tabindex="-1" aria-labelledby="TrayectoriaAlabeoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-l modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="TrayectoriaAlabeoLabel">Cálculo trayectoria Interpolada</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="container modal-body">
+            <div class="col-12">
+                <video id="video"  src="assets/videos/Fase3AnimacionAlabeo.mp4" poster="assets/imagenes/trabajos/Fase3AnimacionAlabeo.jpg" style="height: 100%; width: 100%;"></video>
+                <div class="row container-fluid ms-auto controles-video">
+                    <i class="fas fa-play fa-lg col-2"></i>
+                    <i class="fas fa-pause fa-lg col-2"></i>
+                    <i class="fas fa-stop fa-lg col-2"></i>
+                    <i class="fas fa-backward fa-lg col-2"></i>
+                    <i class="fas fa-forward fa-lg col-2"></i>
+                    <i class="fas fa-expand-arrows-alt fa-lg col-2"></i>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
         </div>
       </div>
     </div>
@@ -139,9 +174,9 @@
                 <div class="fila-trabajos">
                     <div class="col" data-bs-toggle="modal" data-bs-target="#BubbleShooter">
                         <div class="card">
-                        <img src="assets/imagenes/trabajos/proyecto.jpg" class="card-img-top" alt="...">
+                        <img src="assets/imagenes/trabajos/BubbleShooter.png" class="card-img-top" alt="...">
                         <div class="card-body row">
-                            <h5 class="col-9 card-title">Proyecto 4</h5>
+                            <h5 class="col-9 card-title">Bubble Shooter</h5>
                             <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
                         </div>
                         </div>
@@ -178,20 +213,20 @@
             <section class="my-4">
                 <h2>Animación</h2>
                 <div class="fila-trabajos">
-                    <div class="col">
+                    <div class="col" class="col"  data-bs-toggle="modal" data-bs-target="#riggingAnimacion">
                         <div class="card">
                         <img src="assets/imagenes/trabajos/rigging.png" class="card-img-top" alt="...">
                         <div class="card-body row">
-                            <h5 class="col-9 card-title">Proyecto 4</h5>
+                            <h5 class="col-9 card-title">Rigging y Animación</h5>
                             <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
                         </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col"  data-bs-toggle="modal" data-bs-target="#TrayectoriaAlabeo">
                         <div class="card">
-                        <img src="assets/imagenes/trabajos/proyecto.jpg" class="card-img-top" alt="...">
+                        <img src="assets/imagenes/trabajos/Fase3AnimacionAlabeo.jpg" class="card-img-top" alt="...">
                         <div class="card-body row">
-                            <h5 class="col-9 card-title">Proyecto 4</h5>
+                            <h5 class="col-9 card-title">Interpolación trayectorias</h5>
                             <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
                         </div>
                         </div>
