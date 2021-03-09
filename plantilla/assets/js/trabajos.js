@@ -125,6 +125,18 @@ var trabajos = (function(document){
 
     mute.addEventListener("click", muteVideo);
 
+    //Controles audio
+   /* var controles_audio = document.getElementsByClassName("controles-audio");
+    for(var i = 0; i < controles_video.length; i++)
+    {
+        controles_audio[i].querySelector('i.fa-play').addEventListener('click', playAudio);
+        controles_audio[i].querySelector('i.fa-pause').addEventListener('click', pauseAudio);
+        controles_audio[i].querySelector('i.fa-stop').addEventListener('click', stopAudio);
+        controles_audio[i].querySelector('i.fa-backward').addEventListener('click', backwardAudio);
+        controles_audio[i].querySelector('i.fa-forward').addEventListener('click', forwardAudio);
+    }*/ 
+
+
 
     //Animación Hover cards
     function arrowAnimation() {

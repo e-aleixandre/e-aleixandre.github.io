@@ -24,13 +24,31 @@ img{
     height: 200px;
     width: auto;
 }
-.controles-video{
+.btn-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 8%;
+}
+.btn-group > .btn{
+  background-color: cornflowerblue;
+  transition: all 0.15s ease-in;
+  font-size: 18px;
+}
+.btn-group > .btn:hover{
+  transform: translateY(4px);
+  background-color: #1561ea;
+}
+.controles-video, .controles-audio{
   margin-top: 10px;
 }
 .controles-video i:hover{
   color: cornflowerblue;
 }
-.controles-video ul {
+.controles-audio i:hover{
+  color: cornflowerblue;
+}
+.controles-video ul, .controles-audio ul{
   display: flex;
   list-style:none;
   justify-content: space-between;
