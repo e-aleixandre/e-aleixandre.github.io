@@ -2,36 +2,36 @@ var trabajos = (function(document){
 
     //Controles Vídeo
     function playVideo(){
-        var video = this.parentNode.parentNode.getElementsByTagName('video');
+        var video = this.parentNode.parentNode.parentNode.parentNode.getElementsByTagName('video');
         video[0].classList.toggle('video-play');
         video[0].play();
     }
 
     function pauseVideo(){
-        var video = this.parentNode.parentNode.getElementsByTagName('video');
+        var video = this.parentNode.parentNode.parentNode.parentNode.getElementsByTagName('video');
         video[0].pause();
         video[0].classList.toggle('video-play');
     }
 
     function stopVideo(){
-        var video = this.parentNode.parentNode.getElementsByTagName('video');
+        var video = this.parentNode.parentNode.parentNode.parentNode.getElementsByTagName('video');
         video[0].pause();
         video[0].currentTime = 0;
         video[0].classList.toggle('video-play');
     }
 
     function backwardVideo(){
-        var video = this.parentNode.parentNode.getElementsByTagName('video');
+        var video = this.parentNode.parentNode.parentNode.parentNode.getElementsByTagName('video');
         video[0].currentTime = video[0].currentTime - 2;
     }
 
     function forwardVideo(){
-        var video = this.parentNode.parentNode.getElementsByTagName('video');
+        var video = this.parentNode.parentNode.parentNode.parentNode.getElementsByTagName('video');
         video[0].currentTime = video[0].currentTime + 2;
     }
 
     function fullscreenVideo(){
-        this.parentNode.parentNode.getElementsByTagName('video')[0].requestFullscreen();
+        this.parentNode.parentNode.parentNode.parentNode.getElementsByTagName('video')[0].requestFullscreen();
     }
 
     function updateTimeVideo(event){
@@ -40,8 +40,19 @@ var trabajos = (function(document){
     }
 
     function changeVolumeVideo(event) {
-        var video = event.target.parentNode.parentNode.parentNode.querySelector("video");
+        var video = event.target.parentNode.parentNode.parentNode.parentNode.parentNode.querySelector("video");
         video.volume = event.target.value / 100;
+    }
+
+    function muteVideo(event) {
+      var video = event.target.parentNode.parentNode.parentNode.parentNode.parentNode.querySelector("video");
+      var volumebar = event.target.parentNode.parentNode.querySelector('.volume');
+      var muted = video.getAttribute("muted") === "true";
+      video.setAttribute("muted", muted ? false : true);
+      volumebar.value = 0;
+
+      event.target.classList.toggle('fa-volume-up');
+      event.target.classList.toggle('fa-volume-mute');
     }
 
     function switchVideoStatus(){
@@ -106,10 +117,14 @@ var trabajos = (function(document){
     }
 
     var volumenes = document.querySelectorAll("input.volume");
+    var mute = document.querySelector("#control-mute i");
 
     for (var i = 0; i < volumenes.length; i++) {
       volumenes[i].addEventListener('change', changeVolumeVideo);
     }
+
+    mute.addEventListener("click", muteVideo);
+
 
     //Animación Hover cards
     function arrowAnimation() {
@@ -126,5 +141,6 @@ var trabajos = (function(document){
     }
 
     // Se puede devolver un objeto con funciones / atributos
-    return {};
+    return {
+    };
 })(document);
