@@ -41,7 +41,7 @@ var trabajos = (function(document){
         var progressNumber = event.target.parentNode.querySelector(".progress-number");
         var progress = event.target.currentTime * 100 / event.target.duration;
 
-        timeDiv.innerText = getVideoDurationString(event.target);
+        timeDiv.innerText = getMediaDurationString(event.target);
         progressNumber.innerText = (Math.round(progress * 100) / 100) + "%";
 
         progressBar.style.width = progress + "%";
@@ -84,8 +84,8 @@ var trabajos = (function(document){
     }
 
     // Información del vídeo en un formato adecuado
-    function getVideoDurationString(video) {
-      var duration = video.duration - video.currentTime,
+    function getMediaDurationString(media) {
+      var duration = media.duration - media.currentTime,
           mins,
           secs;
 
@@ -144,8 +144,7 @@ var trabajos = (function(document){
         //silenciamos todos los audios, si existen
         var audios_repr = document.getElementsByTagName("audio");
         for(var i = 0; i < audios_repr.length; i++){
-            audios_repr[i].pause();
-            audios_repr[i].currentTime = 0;
+            audios_repr[i].remove();
         }
         
         //Desactivamos todos los botones que pudieran estar activos
@@ -159,19 +158,27 @@ var trabajos = (function(document){
         //Cargamos la nueva pista de Audio
         var nombre_audio = "assets/audios/" + this.name + ".mp3";
         var audio = new Audio(nombre_audio);
+        audio.controls = 'controls';
+
         audio.addEventListener('loadeddata', loadAudioData);
+        audio.addEventListener('timeupdate', updateTimeAudio);
         
         //Insertamos información
         var divAudio = document.getElementById("div-audio");
         divAudio.appendChild(audio);
 
-        var nodeText = document.getElementById('nombre-audio');
-        nodeText.innerText = this.name;
+        var estadoAudio = document.getElementById('nombre-audio');
+        estadoAudio.innerText = this.name;
 
         audio.play();
     }
-    function loadAudioData(){
-
+    function loadAudioData(event){
+        var cadena = "Duración total: " + getMediaDurationString(event.target);
+        document.getElementById('duracion-audio').innerText = cadena;
+    }
+    function updateTimeAudio(event){
+        var timeDiv = document.getElementById("tiempo-audio");
+        timeDiv.innerText = "Tiempo restante: " + getMediaDurationString(event.target);
     }
 
     var audio1 = document.getElementById("audio1");
