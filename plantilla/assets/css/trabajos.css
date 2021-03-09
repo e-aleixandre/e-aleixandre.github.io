@@ -39,22 +39,23 @@ img{
   transform: translateY(4px);
   background-color: #1561ea;
 }
-.controles-video, .controles-audio{
+.controles-video{
   margin-top: 10px;
 }
 .controles-video i:hover{
   color: cornflowerblue;
 }
-.controles-audio i:hover{
-  color: cornflowerblue;
-}
-.controles-video ul, .controles-audio ul{
+.controles-video ul{
   display: flex;
   list-style:none;
   justify-content: space-between;
 }
 .video-play {
   border: 3px solid #1c1c1c;
+}
+.audio-activo{
+  transform: translateY(5px);
+  background-color: #1561ea;
 }
 .fila-trabajos {
   display: flex;

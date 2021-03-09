@@ -125,17 +125,48 @@ var trabajos = (function(document){
 
     mute.addEventListener("click", muteVideo);
 
-    //Controles audio
-   /* var controles_audio = document.getElementsByClassName("controles-audio");
-    for(var i = 0; i < controles_video.length; i++)
-    {
-        controles_audio[i].querySelector('i.fa-play').addEventListener('click', playAudio);
-        controles_audio[i].querySelector('i.fa-pause').addEventListener('click', pauseAudio);
-        controles_audio[i].querySelector('i.fa-stop').addEventListener('click', stopAudio);
-        controles_audio[i].querySelector('i.fa-backward').addEventListener('click', backwardAudio);
-        controles_audio[i].querySelector('i.fa-forward').addEventListener('click', forwardAudio);
-    }*/ 
 
+    //Cargar Audio
+    function loadAudio(){
+        //silenciamos todos los audios, si existen
+        var audios_repr = document.getElementsByTagName("audio");
+        for(var i = 0; i < audios_repr.length; i++){
+            audios_repr[i].pause();
+            audios_repr[i].currentTime = 0;
+        }
+        
+        //Desactivamos todos los botones que pudieran estar activos
+        // y marcamos el audio actual como activo
+        var botones_actv = document.getElementsByClassName('audio-activo');
+        for(i = 0; i < botones_actv.length; i++){
+            botones_actv[i].classList.remove('audio-activo');
+        }
+        this.classList.toggle('audio-activo');
+
+        //Cargamos la nueva pista de Audio
+        var nombre_audio = "assets/audios/" + this.name + ".mp3";
+        var audio = new Audio(nombre_audio);
+        audio.addEventListener('loadeddata', loadAudioData);
+        
+        //Insertamos información
+        var divAudio = document.getElementById("div-audio");
+        divAudio.appendChild(audio);
+
+        var nodeText = document.getElementById('nombre-audio');
+        nodeText.innerText = this.name;
+
+        audio.play();
+    }
+    function loadAudioData(){
+
+    }
+
+    var audio1 = document.getElementById("audio1");
+    var audio2 = document.getElementById("audio2");
+    var audio3 = document.getElementById("audio3");
+    audio1.addEventListener('click', loadAudio);
+    audio2.addEventListener('click', loadAudio);
+    audio3.addEventListener('click', loadAudio);
 
 
     //Animación Hover cards
