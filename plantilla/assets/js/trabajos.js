@@ -35,8 +35,16 @@ var trabajos = (function(document){
     }
 
     function updateTimeVideo(event){
-        var timeDiv = document.getElementById("tiempo-video");
+        var timeDiv = event.target.parentNode.querySelector(".tiempo-video");
+
+        var progressBar = event.target.parentNode.querySelector(".progress-bar");
+        var progressNumber = event.target.parentNode.querySelector(".progress-number");
+        var progress = event.target.currentTime * 100 / event.target.duration;
+
         timeDiv.innerText = getVideoDurationString(event.target);
+        progressNumber.innerText = (Math.round(progress * 100) / 100) + "%";
+
+        progressBar.style.width = progress + "%";
     }
 
     function changeVolumeVideo(event) {
@@ -47,9 +55,15 @@ var trabajos = (function(document){
     function muteVideo(event) {
       var video = event.target.parentNode.parentNode.parentNode.parentNode.parentNode.querySelector("video");
       var volumebar = event.target.parentNode.parentNode.querySelector('.volume');
-      var muted = video.getAttribute("muted") === "true";
-      video.setAttribute("muted", muted ? false : true);
-      volumebar.value = 0;
+
+      if (video.muted)
+      {
+          video.muted = false;
+          volumebar.value = video.volume * 100;
+      } else {
+          video.muted = true;
+          volumebar.value = 0;
+      }
 
       event.target.classList.toggle('fa-volume-up');
       event.target.classList.toggle('fa-volume-mute');
@@ -117,13 +131,12 @@ var trabajos = (function(document){
     }
 
     var volumenes = document.querySelectorAll("input.volume");
-    var mute = document.querySelector("#control-mute i");
+    var mutes = document.querySelectorAll(".control-mute i");
 
     for (var i = 0; i < volumenes.length; i++) {
       volumenes[i].addEventListener('change', changeVolumeVideo);
+      mutes[i].addEventListener("click", muteVideo);
     }
-
-    mute.addEventListener("click", muteVideo);
 
 
     //Cargar Audio

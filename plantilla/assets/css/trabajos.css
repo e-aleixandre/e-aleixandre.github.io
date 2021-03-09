@@ -76,6 +76,17 @@ img{
   color: #1c1c1c;
   opacity: 0;
 }
+
+.progress {
+  --bs-gutter-x: 0;
+  position: relative;
+  text-align: center;
+}
+.progress-number {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
 @media(min-width: 640px) {
   .fila-trabajos .col {
     width: 40%;
