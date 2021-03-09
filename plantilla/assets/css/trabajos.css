@@ -27,10 +27,15 @@ img{
 .controles-video{
   margin-top: 10px;
 }
-.controles-video > i:hover{
+.controles-video i:hover{
   color: #14adcf;
 }
-.video-play{
+.controles-video ul {
+  display: flex;
+  list-style:none;
+  justify-content: space-between;
+}
+.video-play {
   border: 3px solid #1c1c1c;
 }
 .fila-trabajos {
