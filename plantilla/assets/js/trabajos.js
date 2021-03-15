@@ -41,7 +41,8 @@ var trabajos = (function(document){
         var progressNumber = event.target.parentNode.querySelector(".progress-number");
         var progress = event.target.currentTime * 100 / event.target.duration;
 
-        timeDiv.innerText = getMediaDurationString(event.target);
+        // Display video time 00:00 / 01:30 format
+        timeDiv.innerText = getMediaDurationString(event.target.currentTime) + "/" + getMediaDurationString(event.target.duration);
         progressNumber.innerText = (Math.round(progress * 100) / 100) + "%";
 
         progressBar.style.width = progress + "%";
@@ -79,14 +80,9 @@ var trabajos = (function(document){
             this.classList.toggle('video-play');
         }
     }
-    function setVideoInformation(){
-        //this.duration;
-    }
-
     // Información del vídeo en un formato adecuado
-    function getMediaDurationString(media) {
-      var duration = media.duration - media.currentTime,
-          mins,
+    function getMediaDurationString(duration) {
+      var mins,
           secs;
 
       secs = duration % 60;
@@ -126,7 +122,6 @@ var trabajos = (function(document){
     for(var j = 0; j < controles_video.length; j++)
     {
         video_elements[j].addEventListener('click', switchVideoStatus);
-        video_elements[j].addEventListener('loadeddata', setVideoInformation);
         video_elements[j].addEventListener('timeupdate', updateTimeVideo);
     }
 
@@ -137,48 +132,51 @@ var trabajos = (function(document){
       volumenes[i].addEventListener('change', changeVolumeVideo);
       mutes[i].addEventListener("click", muteVideo);
     }
-
-
-    //Cargar Audio
-    function loadAudio(){
-        //silenciamos todos los audios, si existen
+    function removeAudioPlaying()
+    {
         var audios_repr = document.getElementsByTagName("audio");
         for(var i = 0; i < audios_repr.length; i++){
             audios_repr[i].remove();
         }
         
         //Desactivamos todos los botones que pudieran estar activos
-        // y marcamos el audio actual como activo
         var botones_actv = document.getElementsByClassName('audio-activo');
         for(i = 0; i < botones_actv.length; i++){
             botones_actv[i].classList.remove('audio-activo');
         }
+    }
+
+    //Cargar Audio
+    function loadAudio(){      
+        
+        removeAudioPlaying();
+
+        //Marcamos el audio actual como activo
         this.classList.toggle('audio-activo');
 
         //Cargamos la nueva pista de Audio
         var nombre_audio = "assets/audios/" + this.name + ".mp3";
         var audio = new Audio(nombre_audio);
+        audio.style.width = "100%";
+        audio.volume = 0.15;
         audio.controls = 'controls';
 
-        audio.addEventListener('loadeddata', loadAudioData);
         audio.addEventListener('timeupdate', updateTimeAudio);
         
         //Insertamos información
         var divAudio = document.getElementById("div-audio");
         divAudio.appendChild(audio);
 
-        var estadoAudio = document.getElementById('nombre-audio');
-        estadoAudio.innerText = this.name;
+        var nombreAudio = document.getElementById('nombre-audio');
+        nombreAudio.innerText = this.name;
+        var url = "assets/imagenes/trabajos/" + this.name + ".png";
+        nombreAudio.style.backgroundImage = "url('url')";
 
         audio.play();
     }
-    function loadAudioData(event){
-        var cadena = "Duración total: " + getMediaDurationString(event.target);
-        document.getElementById('duracion-audio').innerText = cadena;
-    }
     function updateTimeAudio(event){
         var timeDiv = document.getElementById("tiempo-audio");
-        timeDiv.innerText = "Tiempo restante: " + getMediaDurationString(event.target);
+        timeDiv.innerText = getMediaDurationString(event.target.currentTime) + " / " + getMediaDurationString(event.target.duration);
     }
 
     var audio1 = document.getElementById("audio1");
@@ -203,6 +201,26 @@ var trabajos = (function(document){
         card_elements[i].addEventListener('mouseleave', arrowAnimationOut);
     }
 
+    //Parar la reproducción multimedia cuando los 'MODALS' se cierran
+    var modals = document.getElementsByClassName('modal');
+    for (var i = 0; i < modals.length; i++)
+        modals[i].addEventListener('hidden.bs.modal', stopModalMultimedia);
+
+    function stopModalMultimedia(event){
+
+      var video = event.target.querySelector('video');
+      
+      if (video){
+        video.pause();
+        video.currentTime = 0;
+        video.classList.toggle('video-play');
+      }
+      else{
+        removeAudioPlaying();
+        estadoAudio.innerText = "";
+      }
+
+    }
     // Se puede devolver un objeto con funciones / atributos
     return {
     };

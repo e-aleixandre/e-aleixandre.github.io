@@ -85,7 +85,6 @@
                       </div>
                     </div>
                     <div class="tiempo-video">
-                        Tiempo
                     </div>
                 </div>
             </div>
@@ -115,10 +114,6 @@
                 <div id="div-audio"></div>
                 <div class="container-fluid">
                     <div id="tiempo-audio">
-                        Tiempo
-                    </div>
-                    <div id="duracion-audio">
-                        Duración
                     </div>
                 </div>
             </div>
@@ -134,7 +129,7 @@
     <div class="modal-dialog modal-l modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="BubbleShooterLabel">Rigging y Animación</h5>
+          <h5 class="modal-title" id="BubbleShooterLabel">Bubble Shooter</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="container modal-body">
@@ -167,6 +162,29 @@
                     <i class="fas fa-backward fa-lg col-2"></i>
                     <i class="fas fa-forward fa-lg col-2"></i>
                     <i class="fas fa-expand-arrows-alt fa-lg col-2"></i>
+                </div>
+                <div class="container">
+                    <div class="mt-3">
+                        <label class="mb-1">Progreso</label>
+                        <div class="row">
+                            <div class="progress">
+                                <div class="progress-number"></div>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="mt-3">
+                      <label>Volumen</label>
+                      <div class="row">
+                        <div class="col-11"><input type="range" min="0" max="100" value="100" class="form-range volume"></div>
+                        <div class="col-1 control-mute"><i class="fas fa-volume-up"></i></div>
+                      </div>
+                    </div>
+                    <div class="tiempo-video">
+                        Tiempo
+                    </div>
                 </div>
             </div>
         </div>
@@ -282,34 +300,16 @@
                         </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card">
-                        <img src="assets/imagenes/trabajos/proyecto.jpg" class="card-img-top" alt="...">
-                        <div class="card-body row">
-                            <h5 class="col-9 card-title">Proyecto 4</h5>
-                            <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                        <img src="assets/imagenes/trabajos/proyecto.jpg" class="card-img-top" alt="...">
-                        <div class="card-body row">
-                            <h5 class="col-9 card-title">Proyecto 4</h5>
-                            <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
-                        </div>
-                        </div>
-                    </div>
                     </div>
             </section>
             <section class="my-4">
                 <h2>Otros</h2>
                 <div class="fila-trabajos">
                     <div class="col">
-                        <div class="card">
-                        <img src="assets/imagenes/trabajos/proyecto.jpg" class="card-img-top" alt="...">
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#reproductorAudio">
+                        <img src="assets/imagenes/trabajos/reproductor.jpg" class="card-img-top" alt="...">
                         <div class="card-body row">
-                            <h5 class="col-9 card-title">Proyecto 4</h5>
+                            <h5 class="col-9 card-title">Reproductor Audio</h5>
                             <i class="col-3 fas fa-long-arrow-alt-right fa-2x animate__animated"></i>
                         </div>
                         </div>

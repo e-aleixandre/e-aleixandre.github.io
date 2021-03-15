@@ -28,7 +28,7 @@ img{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 8%;
+  margin-bottom: 2%;
 }
 .btn-group > .btn{
   background-color: cornflowerblue;
@@ -36,7 +36,7 @@ img{
   font-size: 18px;
 }
 .btn-group > .btn:hover{
-  transform: translateY(4px);
+  transform: scale(1.1, 1.1) translateY(4px);
   background-color: #1561ea;
 }
 .controles-video{
@@ -57,6 +57,17 @@ img{
   transform: translateY(5px);
   background-color: #1561ea;
 }
+#nombre-audio{
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  font-size: 24px;
+  font-weight: bold;
+}
+#div-audio:first-child {
+  width: 100%;
+}
 .fila-trabajos {
   display: flex;
   flex-wrap: wrap;
@@ -67,6 +78,9 @@ img{
   display: flex;
   justify-content: center;
   width: 100%;
+}
+.col{
+  flex: 1 0 0%;
 }
 .fila-trabajos .col .card {
   width: 300px;
@@ -86,18 +100,16 @@ img{
   left: 0;
   right: 0;
 }
-@media(min-width: 640px) {
+@media(min-width: 767px) {
   .fila-trabajos .col {
     width: 40%;
   }
 }
-
 @media(min-width: 1200px) {
   .fila-trabajos .col {
     width: 30%;
   }
 }
-
 @media(max-width: 640px){
   h2{
     text-align: center;
