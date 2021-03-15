@@ -93,7 +93,7 @@ var trabajos = (function(document){
       mins = addLeadingZeros(mins);
       secs = addLeadingZeros(secs);
 
-      return mins + ":" + secs;
+      return "  " + mins + ":" + secs;
     }
 
     function addLeadingZeros(num) {
@@ -169,14 +169,25 @@ var trabajos = (function(document){
 
         var nombreAudio = document.getElementById('nombre-audio');
         nombreAudio.innerText = this.name;
-        var url = "assets/imagenes/trabajos/" + this.name + ".png";
-        nombreAudio.style.backgroundImage = "url('url')";
 
         audio.play();
     }
     function updateTimeAudio(event){
         var timeDiv = document.getElementById("tiempo-audio");
         timeDiv.innerText = getMediaDurationString(event.target.currentTime) + " / " + getMediaDurationString(event.target.duration);
+
+        var stateDiv = document.getElementById("estado-audio");
+        stateDiv.innerText = AudioState(event.target);
+    }
+
+    function AudioState(audio)
+    {
+        if(audio.ended)
+            return "Finalizado";
+        else if (audio.paused)
+            return "Pausado";
+        else
+            return "Reproduciendo";
     }
 
     var audio1 = document.getElementById("audio1");

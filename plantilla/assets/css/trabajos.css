@@ -47,7 +47,7 @@ img{
 }
 .controles-video ul{
   display: flex;
-  list-style:none;
+  list-style: none;
   justify-content: space-between;
 }
 .video-play {
@@ -60,10 +60,17 @@ img{
 #nombre-audio{
   display: flex;
   justify-content: center;
-  margin-top: 10%;
-  margin-bottom: 5%;
-  font-size: 24px;
-  font-weight: bold;
+  padding-top: 4%;
+  margin-bottom: 2%;
+  height: 80px;
+  font-size: 26px;
+  opacity: 1 !important;
+}
+div .mb-1, .control-tiempo-audio{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 #div-audio:first-child {
   width: 100%;
@@ -71,8 +78,8 @@ img{
 .fila-trabajos {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+  justify-content: start;
+  gap: 20px;
 }
 .fila-trabajos .col {
   display: flex;
@@ -80,7 +87,7 @@ img{
   width: 100%;
 }
 .col{
-  flex: 1 0 0%;
+  flex: 0 0 0%;
 }
 .fila-trabajos .col .card {
   width: 300px;
