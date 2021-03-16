@@ -42,7 +42,7 @@ header > nav > .container-fluid > a{
     flex-direction: column;
 }
 
-@media(min-width: 990px) {
+@media(min-width: 992px) {
     .header {
         background-color: initial;
         top: 0;
@@ -56,7 +56,7 @@ header > nav > .container-fluid > a{
     }
 
 }
-@media(max-width: 990px){
+@media(max-width: 991px){
     #header > .navbar > .container-fluid > .navbar-collapse{
         width: 100%;
     }
