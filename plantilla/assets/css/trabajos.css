@@ -76,23 +76,36 @@ div .mb-1, .control-tiempo-audio{
   width: 100%;
 }
 .fila-trabajos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  gap: 20px;
-}
-.fila-trabajos .col {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 20%);
+  grid-gap: 16px;
   justify-content: center;
-  width: 100%;
 }
-.col{
-  flex: 0 0 0%;
+
+@media (max-width: 1400px) {
+  .fila-trabajos {
+    grid-template-columns: repeat(auto-fit, 30%);
+  }
 }
-.fila-trabajos .col .card {
-  width: 300px;
-  margin: 0px;
+
+@media (max-width: 1080px) {
+  .fila-trabajos {
+    grid-template-columns: repeat(auto-fit, 45%);
+  }
 }
+
+@media (max-width: 780px) {
+  .fila-trabajos {
+    grid-template-columns: repeat(auto-fit, 70%);
+  }
+}
+
+@media (max-width: 600px) {
+  .fila-trabajos {
+    grid-template-columns: repeat(auto-fit, 90%);
+  }
+}
+
 .fa-long-arrow-alt-right{
   color: #1c1c1c;
   opacity: 0;
@@ -106,19 +119,4 @@ div .mb-1, .control-tiempo-audio{
   position: absolute;
   left: 0;
   right: 0;
-}
-@media(min-width: 767px) {
-  .fila-trabajos .col {
-    width: 40%;
-  }
-}
-@media(min-width: 1200px) {
-  .fila-trabajos .col {
-    width: 30%;
-  }
-}
-@media(max-width: 640px){
-  h2{
-    text-align: center;
-  }
 }
