@@ -197,13 +197,26 @@ var trabajos = (function(document){
     audio2.addEventListener('click', loadAudio);
     audio3.addEventListener('click', loadAudio);
 
+    //Animación Hover Secondary Nav
+    function navAnimationIN(){
+        this.classList.add('animate__pulse');
+    }
+    function navAnimationOUT(){
+        this.classList.remove('animate__pulse');
+    }
+    var secondary_nav = document.getElementsByClassName('secondary-nav');
+    var lis = secondary_nav[0].getElementsByTagName('li');
+    for(var z = 0; z < lis.length; z++) {
+        lis[z].addEventListener('mouseover', navAnimationIN);
+        lis[z].addEventListener('mouseleave', navAnimationOUT);
+    }
 
     //Animación Hover cards
     function arrowAnimation() {
-        this.querySelector('i').classList.add('animate__fadeInLeft');
+        this.querySelector('i.fa-long-arrow-alt-right').classList.add('animate__fadeInLeft');
     }
     function arrowAnimationOut(){
-        this.querySelector('i').classList.remove('animate__fadeInLeft');
+        this.querySelector('i.fa-long-arrow-alt-right').classList.remove('animate__fadeInLeft');
     }
     var card_elements = document.getElementsByClassName('card');
     for (var i = 0; i < card_elements.length; i++)

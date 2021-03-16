@@ -82,7 +82,7 @@ div .mb-1, .control-tiempo-audio{
   display: grid;
   grid-template-columns: repeat(auto-fit, 20%);
   grid-gap: 16px;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 @media (max-width: 1400px) {
@@ -124,7 +124,7 @@ div .mb-1, .control-tiempo-audio{
   right: 0;
 }
 h2{
-  padding-top: 10%;
+  padding-top: 12%;
 }
 .secondary-nav{
   margin: 0;
@@ -154,7 +154,6 @@ h2{
 }
 .secondary-nav > div > ul > li:hover{
   background-color: #1c1c1c;
-  
 }
 .secondary-nav > div > ul > li:hover .secondary-nav-link{
   color: #f7f7f7;
