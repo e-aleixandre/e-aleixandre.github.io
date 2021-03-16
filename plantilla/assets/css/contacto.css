@@ -48,6 +48,10 @@ h1{
     font-size: 30px;
   }
 }
+.form-contacto .form-control {
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
 #info-contacto{
   background-color: cornflowerblue;
   height: 100%;
