@@ -57,6 +57,9 @@ img{
   transform: translateY(5px);
   background-color: #1561ea;
 }
+audio{
+  background-color: #1561ea;
+}
 #nombre-audio{
   display: flex;
   justify-content: center;
@@ -107,6 +110,52 @@ div .mb-1, .control-tiempo-audio{
   left: 0;
   right: 0;
 }
+h2{
+  padding-top: 10%;
+}
+.secondary-nav{
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  background-color: #f7f7f7;
+  display: block;
+  position: relative;
+}
+.secondary-nav > div > ul{
+  width: 100%;
+  justify-content: space-around;
+  margin: 0;
+}
+.secondary-nav-link{
+  color: #1c1c1c;
+  font-family: 'Tahoma';
+  font-size: 18px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.secondary-nav > div > ul > li{
+  flex-grow: 1;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+.secondary-nav > div > ul > li:hover{
+  background-color: #1c1c1c;
+  
+}
+.secondary-nav > div > ul > li:hover .secondary-nav-link{
+  color: #f7f7f7;
+}
+@media (max-width: 990px)
+{
+  .secondary-nav > div > ul{
+    width: 100%;
+  }
+}
+.secondary-nav > div{
+    justify-content: center;
+}
+
 @media(min-width: 767px) {
   .fila-trabajos .col {
     width: 40%;

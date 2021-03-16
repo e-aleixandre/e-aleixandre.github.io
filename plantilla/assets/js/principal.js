@@ -12,7 +12,8 @@ var principal = (function(document){
       this.classList.toggle('active');
     }
     // Menu hover/mouseleave
-    var elementos = document.getElementsByClassName('nav-link');
+    var main_nav = document.getElementById('main-nav');
+    var elementos = main_nav.getElementsByClassName('nav-link');
     for (var i = 0; i < elementos.length; i++)
     {
         elementos[i].addEventListener('mouseover', hoverlinks);

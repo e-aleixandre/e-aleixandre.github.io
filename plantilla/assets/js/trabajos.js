@@ -220,6 +220,7 @@ var trabajos = (function(document){
     function stopModalMultimedia(event){
 
       var video = event.target.querySelector('video');
+      var estadoAudio = document.getElementById("estado-audio");
       
       if (video){
         video.pause();

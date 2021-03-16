@@ -66,7 +66,7 @@ header > nav > .container-fluid > a{
         justify-content: space-around;
     }    
     #header > .navbar > .container-fluid > .navbar-collapse > ul > li > a{
-        font-size: 18px;
+        font-size: 22px;
     }   
 }
 @media(max-width: 575px){
@@ -84,7 +84,7 @@ h2{
 .nav-link{
     font-family: 'Uniform';
     padding-bottom: 0px;
-    font-size: 22px;
+    font-size: 24px;
     color: white;
     margin-left: 8px;
     padding-left: 0;
