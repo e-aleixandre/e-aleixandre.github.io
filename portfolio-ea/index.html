@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio de Enrique Aleixandre</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        #carouselExampleDark video {
+            height: 576px;
+        }
+
+        .carousel-caption {
+            background-color: rgba(200,200,200,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper" class="container text-center">
+        <div id="title">
+            <h1>Portfolio de Simulación</h1>
+        </div>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <video src="videos/pendulo-elastico.mp4" class="d-block w-100" controls></video>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Péndulo elástico</h5>
+                  <p>Un péndulo colgando de un muelle, simulado en este caso con integrador Runge-Kutta 4. Se desarrolló una clase Force que se puede ver al final del vídeo para facilitar el trabajo y permitir pintar el vector de cada fuerza en pantalla.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <video src="videos/fireworks.mp4" class="d-block w-100" controls></video>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Fuegos artificiales</h5>
+                  <p>Simulación de fuegos artificiales usando sistemas de partículas. El viento se puede manejar con las teclas. Se ha usado un rellenado de fondo que no es totalmente opaco para que haya "rastro" y quede mejor visualmente. Además se utilizan otros pequeños sistemas de partículas para simular las chispas de los cohetes.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <video src="videos/sistemas-colisiones.mp4" class="d-block w-100" controls></video>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Colisiones partícula-partícula</h5>
+                  <p>Laboratorio realizado para el estudio del rendimiento de distintos sistemas de colisiones partícula-partícula. En este caso se muestra la diferencia de rendimiento entre un sistema de "todos contra todos" en comparación a un sistema grid y uno hash.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <video src="videos/superficie-elastica.mp4" class="d-block w-100" controls></video>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Superficie elástica</h5>
+                  <p>En este caso se trata de una superficie elástica formada por partículas unidas por muelles. Los muelles se pueden disponer de distintas formas para crear estructuras que se comportan de forma distinta. Además de estos muelles que sirven para simular el comportamiento de una tela o cama elástica, se generan muelles que impiden el contacto de la bola, con lo que la impulsan.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+</body>
+</html>
